@@ -2,13 +2,13 @@ import Data.Char (toLower, isSpace)
 
 soma1 :: (Eq a) => a -> [(a,Int)] -> [(a,Int)]
 soma1 ch [] = [(ch,1)]
-soma1 ch ((a,n):ds) 
+soma1 ch ((a,n):ds)
     | ch==a = (a,n+1):ds
-    | otherwise = (a,n):(soma1 ch ds)
+    | otherwise = (a,n):soma1 ch ds
 
 letramaiscomum :: [Char] -> Char
 ----------------------- 1 --- 2 ---------------------------------------------------------------------------- 3 ----- 4 -------------------- 5 ------------------------------------------------------------------------------
-letramaiscomum string = fst (foldl (\ tupla x -> if snd x > snd tupla then (fst x, snd x) else tupla) tupla (drop 1 (foldl (\ soma x -> if (not (isSpace x)) then soma1 (toLower x) soma else soma1 ' ' soma) soma string)))
+letramaiscomum string = fst (foldl (\ tupla x -> if snd x > snd tupla then x else tupla) tupla (drop 1 (foldl (\ soma x -> if not (isSpace x) then soma1 (toLower x) soma else soma1 ' ' soma) soma string)))
                         where tupla = (' ', 0)
                               soma = [(' ', 0)]
 -- 1 - Pega o primeiro elemento da tupla retornada por 2
