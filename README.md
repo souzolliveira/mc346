@@ -42,3 +42,24 @@ funções talvez úteis que você pode usar se quiser:
 `snd :: (a,b) -> b` -> retorna o 2º elemento de uma tupla de 2
 
 `maximum :: Ord a => [a] -> a` retorna o maior elemento de uma lista. Verifique o que ele faz para lista de tuplas. Resposta: retorna a tupla com maior primeiro elemento, em caso de igualdade, retorna a tupla com maior segundo elemento entre os empatados
+
+### Tarefa 4 - Compressão de listas
+
+Dada a lista ( de caracteres)
+
+`"aaabbaasxbbbb"`
+
+Vamos definir uma lista comprimida cujos elementos são tuplas de dois elementos (item, quantidade), onde quantidade é o número de vezes que o item aparece sequenciamente na lista. Assim, a compressão dessa lista seria:
+
+`[('a',3),('b',2),('a',2),('s',1),('x',1),('b',4)]`
+
+Implemente a função `comprime :: Eq a => [a] -> [(a,Int)]`
+```
+comprime [3,3,3,4,5,6,5,5,5,5,7]
+=> [(3,3),(4,1),(5,1),(6,1),(5,4),(7,1)]
+```
+Implemente a função descomprime que é o inverso de comprime
+```
+descomprime [(3,3),(4,1),(5,1),(6,1),(5,4),(7,1)]
+==> [3,3,3,4,5,6,5,5,5,5,7]
+```
