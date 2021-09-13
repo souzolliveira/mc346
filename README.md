@@ -1,4 +1,4 @@
-# mc346
+# MC346
 Paradigmas de programação 2s21
 
 ## Tarefa 1 - Trocatodos e cumsum
@@ -43,7 +43,7 @@ funções talvez úteis que você pode usar se quiser:
 
 `maximum :: Ord a => [a] -> a` retorna o maior elemento de uma lista. Verifique o que ele faz para lista de tuplas. Resposta: retorna a tupla com maior primeiro elemento, em caso de igualdade, retorna a tupla com maior segundo elemento entre os empatados
 
-### Tarefa 4 - Compressão de listas
+## Tarefa 4 - Compressão de listas
 
 Dada a lista ( de caracteres)
 
@@ -63,3 +63,44 @@ Implemente a função descomprime que é o inverso de comprime
 descomprime [(3,3),(4,1),(5,1),(6,1),(5,4),(7,1)]
 ==> [3,3,3,4,5,6,5,5,5,5,7]
 ```
+
+## Projeto 1 - Contaminação numa rede de pessoas
+
+Vamos assumir que nós temos uma rede de interação de pessoas representado por um grafo não direcionado com pesos. Cada pessoa é um nó/vértice no grafo e o peso da aresta entre o no A e B é a frequência ou intensidade de conexão entre A e B (por exemplo assuma que esse peso mede o némero de vezes no mês que A e B conversam).
+
+Se uma membro do grafo é contaminado por um vírus, queremos determinar em quanto tempo todos os nós do grafo estarão contaminados. O tempo de contaminação entre A e B é o inverso da frequência de contato entre A e B (se A e B se falam 4 vezes for mês, o tempo de contaminação entre A e B é 1/4 ou 0.25 de um mês.
+
+### Algoritmo
+Esse problema de encontrar o menor caminho de um vértice para todos os vértices de um grafo é conhecido como shortest-path tree. A solução é uma pequena variação do algoritmo de Dykstra. No Dykstra você tem a fonte e o destino, e constrói as estruturas de dados do algoritmo partindo da fonte e termina quando a fronteira atinge o destino. No caso do shortest-path tree você continua o algoritmo até que todos os vértices tenham sido visitados.
+
+Veja que para esse problema nós não precisamos do caminho do nó origem a todos os outros nós. Precisamos apenas do tempo para a contaminação.
+
+### Formato dos dados
+
+Os dados do programa serão no seguinte formato:
+
+```
+antonio beto 5.4
+antonio denise 1.2
+fabio edite  9.3
+...
+fabio zelia 4.5
+
+antonio
+```
+
+As linhas como `antonio beto 5.4` indica que do nó `antonio` para o nó `beto` a frequência de contato é `5.4` (vezes por mês). Após todas as linhas do tipo acima, há uma linha em branco, e uma linha com o nome de um nó que é o nó contaminado.
+
+Os dados serão lidos do `standard input`.
+
+A saída deve ser no formato:
+
+`3.14`
+
+um número com 2 casas decimais que indica o tempo mínimo para que todos sejam contaminados.
+
+Você pode assumir que o grafo é conectado, ou seja, existe um caminho entre quaisquer 2 nós do grafo.
+
+Você não precisa usar estruturas de dados complexas como um “priority queue” que são `O(1)` para achar o mínimo. Pode fazer uma busca linear para achar o mínimo e usar as funções já disponíveis no Haskell.
+
+Você não pode usar nenhum pacote do Haskel senão as bibliotecas padrão.

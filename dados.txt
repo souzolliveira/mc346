@@ -1,0 +1,16 @@
+antonio beto 4.5
+antonio henrique 8.6
+beto henrique 11.6
+beto carlos 8.2
+carlos daniel 7.6
+carlos igor 10.9
+carlos fernando 1.0
+daniel fernando 14.6
+daniel emanuel 9.6
+emanuel fernando 10.6
+fernando gustavo 2.6
+gustavo igor 6.6
+gustavo henrique 1.2
+henrique igor 7.6
+
+antonio
