@@ -153,3 +153,12 @@ Você pode assumir que o grafo é conectado, ou seja, existe um caminho entre qu
 Você não precisa usar estruturas de dados complexas como um “priority queue” que são `O(1)` para achar o mínimo. Pode fazer uma busca linear para achar o mínimo e usar as funções já disponíveis no Haskell.
 
 Você não pode usar nenhum pacote do Haskel senão as bibliotecas padrão.
+
+#
+## Prolog
+
+### Tarefa 6 - Vértice conectado
+
+Suponha que nos temos um predicado `v(v1)` que indica que `v1` é um vértice num grafo e `a(v1,v2)` que indica que há uma aresta direcionada de `v1` para `v2`.
+
+Defina o predicado `conectado(v1,v2)` se existe uma aresta entre `v1` e `v2` ou se existe uma sequência de arestas `a(v1,v3)`, `a(v3,v4)`, etc `a(vn,v2)`.
