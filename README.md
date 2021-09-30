@@ -162,3 +162,17 @@ Você não pode usar nenhum pacote do Haskel senão as bibliotecas padrão.
 Suponha que nos temos um predicado `v(v1)` que indica que `v1` é um vértice num grafo e `a(v1,v2)` que indica que há uma aresta direcionada de `v1` para `v2`.
 
 Defina o predicado `conectado(v1,v2)` se existe uma aresta entre `v1` e `v2` ou se existe uma sequência de arestas `a(v1,v3)`, `a(v3,v4)`, etc `a(vn,v2)`.
+
+### Tarefa 7 - Troca todos
+
+Implemente o predicado `trocatodos(Lista, Novo, Velho, NovaLista) modo +++-` que troca todas as instâncias do item `Velho` da `Lista` pelo item `Novo` e “retorna” na `NovaLista` essa lista com os item trocados. Exemplos:
+
+```
+trocatodos( [1,2,3,2,3,4,5,2], 10, 2, L). L = [1,10,3,10,3,4,5,10] 
+
+trocatodos( [], 10, 2, L). L = [] 
+
+trocatodos( [1,2,3,2,3,4,5,2], 10, 12,L). L = [1,2,3,2,3,4,5,2]
+
+trocatodos( [1,2,3,2,3,4,5,2], 3, 2,L). L = [1,3,3,3,3,4,5,3]
+```
