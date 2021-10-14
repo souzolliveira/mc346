@@ -163,6 +163,8 @@ Suponha que nos temos um predicado `v(v1)` que indica que `v1` é um vértice nu
 
 Defina o predicado `conectado(v1,v2)` se existe uma aresta entre `v1` e `v2` ou se existe uma sequência de arestas `a(v1,v3)`, `a(v3,v4)`, etc `a(vn,v2)`.
 
+#
+
 ### Tarefa 7 - Troca todos
 
 Implemente o predicado `trocatodos(Lista, Novo, Velho, NovaLista) modo +++-` que troca todas as instâncias do item `Velho` da `Lista` pelo item `Novo` e “retorna” na `NovaLista` essa lista com os item trocados. Exemplos:
@@ -176,3 +178,35 @@ trocatodos( [1,2,3,2,3,4,5,2], 10, 12,L). L = [1,2,3,2,3,4,5,2]
 
 trocatodos( [1,2,3,2,3,4,5,2], 3, 2,L). L = [1,3,3,3,3,4,5,3]
 ```
+
+#
+
+### Tarefa 8 - Item mais comum numa lista
+
+Escreva um programa em prolog que lê uma lista de números e/ou átomos e imprime o elemento mais frequente na lista (se houver mais do que um, qualquer um dos mais frequentes será considerado como correto).
+
+A lista será lida como: `[el1, el2, el3, el4 ... eln]`.
+
+Onde `eli` é um elemento da lista e a lista termina com um ponto, assim pode ser lido pelo predicado `read`.
+
+O predicado principal deverá se chamar topo (um predicado sem argumentos) para a lista: `[2,3,4,2,4,5,1,7,ab,9,4]`.
+
+O programa deve imprimir o 4 (que aparece 3 vezes na lista) para a lista: `[2,3,4,2,4,5,1,7,ab,9,4,2]`.
+Tanto o 2 como o 4 são respostas corretas.
+
+#
+
+## Python
+
+### Tarefa 9 - Substring
+
+Escreva uma função Python que recebe 2 strings e retorna um inteiro que é o tamanho do maior substring no final do 1º argumento que também está no começo do 2º argumento.
+
+Se não há um substring em comum entre o fim do 1º argumento e o começo do 2º argumento, a função retorna 0.
+
+```
+funcao("abcxxxxa", "xxaabcd") => 3 (o substring "xxa") 
+funcao("abcxxxxa", "yxxaabcd") => 0 (nenhum substring))
+```
+
+#
