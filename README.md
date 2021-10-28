@@ -196,6 +196,10 @@ Tanto o 2 como o 4 são respostas corretas.
 
 #
 
+### Projeto 2 - 
+
+#
+
 ## Python
 
 ### Tarefa 9 - Substring
@@ -208,5 +212,41 @@ Se não há um substring em comum entre o fim do 1º argumento e o começo do 2�
 funcao("abcxxxxa", "xxaabcd") => 3 (o substring "xxa") 
 funcao("abcxxxxa", "yxxaabcd") => 0 (nenhum substring))
 ```
+
+#
+
+### Tarefa 10 - Generator/Iterator
+
+Escreva um `generator` `concorda` que recebe 2 `iterators` e retorna um `iterator` com os elementos que são iguais par a par (nas posições correspondentes) nos `iterators`, isto é, onde os 2 `iterators` concordam. Para um par de valores que os 2 `iterators` não concordam, retornar `False`.
+
+O `generator` deve retornar um `iterator` e não uma lista com todas as respostas. O `iterator` `concorda` termina quando um dos `iterators` termina (gera um `StopInteration`).
+
+Ex: vamos supor que os elementos do `iterator` `a` começam com `1,2,4,5,7,8,2,3,4,5,...` e os elementos do `iterator` `b` começam com `1,2,4,8,7,8,2,7,4,5`. Então `concorda(a,b)` deve retornar `1,2,4,False,7,8,2,False,4,...`. Se o `b` termina depois do 5, o `concorda` também termina.
+
+#
+
+### Tarefa 11 - Numpy - Normaliza
+
+
+Escreva trecho de código que normaliza (`L1`*) apenas as linhas de um `array 2D` cuja primeira coluna é negativa. Altere o valor das linhas apropriadas do array. 
+
+* Normalização `L1` é garantir que a soma dos valores absolutos é igual a 1. Normalmente, normalização é garantir que a soma dos quadrados dos valores é igual a 1 (isso é oficialmente conhecido como `norma-2` ou normalização `L2`).
+#
+
+### Tarefa 12 - 
+
+Compute um `array 1D` com o item de menor valor para cada coluna de um `array 2D`.
+
+#
+
+### Tarefa 13 - 
+
+
+
+#
+
+### Projeto 3 - 
+
+
 
 #
